@@ -12,8 +12,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os.path
 from pathlib import Path
 import dj_database_url
+
+
+
 from decouple import config
 import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +32,7 @@ SECRET_KEY = 'django-insecure-1qyr=libn=bd5%m2i_k4g$0wp7x!n+g^91nefus97)*w*ok+*a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://lsymuslim-2b2c21d7f680.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['https://lsymusulman-5b440d42e33a.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
@@ -52,7 +56,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
 
 
 ]
@@ -82,18 +88,31 @@ WSGI_APPLICATION = 'projet_mosquee.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-   }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd67e7gcke5qnlf',
+        'USER': 'u1s4q064if9i4i',
+        'PASSWORD': 'p2ecbc9f6f21b4a12b620f2db629851580124ceb8fec4b8ddfb30e222ba49685c',
+        'HOST' : 'c8lj070d5ubs83.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+        'POST' : '5432'
+  }
+}
+DATABASES = {
+    'default' : {
+        'ENGINE' : 'django.db.backends.sqlite3',
+    'NAME': BASE_DIR / "db.sqlite3"
+    }
 }
 
-DATABASES = {
-    'default':dj_database_url.config(default= config('DATABASE_URL'))
-}
+#DATABASES = {
+ #   'default':dj_database_url.config(default= config('DATABASE_URL',default='sqlite:///db.sqlite3'))
+#}
+#DATABASE_URL = config('DATABASE_URL', default='sqlite://db.sqlite3')
 
 #DATABASES ['default'] = dj_database_url.config(default=os.environ.get('DATABASE_URL'), conn_max_age=600, ssl_require=True)
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
