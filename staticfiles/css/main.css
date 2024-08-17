@@ -1,0 +1,55 @@
+
+
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: #155724;
+    font-family: 'Cairo', sans-serif;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #155724;
+}
+
+.form-control {
+    border: 2px solid #155724;
+    border-radius: 5px;
+}
+
+.btn-custom {
+    background-color: #155724;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btn-custom:hover {
+    background-color: #0b3d31;
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #155724;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+::placeholder {
+    color: #155724;
+    opacity: 0.6;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');

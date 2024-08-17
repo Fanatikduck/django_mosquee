@@ -1,0 +1,178 @@
+{% extends 'main.html'%}
+
+{% block content %}
+
+
+    <title>Recensement des Élèves Musulmans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #006644;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #004d40 3px solid;
+        }
+        header h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .content h2 {
+            color: #006644;
+            text-align: center;
+        }
+        .content p {
+            text-align: justify;
+            font-size: 16px;
+        }
+        .content a {
+            color: #006644;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #004d40;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recensement des Élèves Musulmans</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Pourquoi est-il important de vous recenser ?</h2>
+            <p>
+                Salam Alaykum chers frères et sœurs. Nous avons le plaisir de vous informer que la
+                <strong>Communauté Musulmane du Lycée Scientifique de Yamoussoukro</strong> lance une campagne de
+                recensement des élèves musulmans. Cette initiative vise à mieux connaître les membres de notre
+                communauté afin de renforcer les liens qui nous unissent et de mieux répondre à vos besoins.
+            </p>
+            <p>
+                En vous recensant, vous contribuez à créer une base solide pour notre communauté. Cela nous permet
+                d'organiser des activités plus pertinentes, de diffuser des informations essentielles, et de vous offrir
+                un soutien spirituel et académique sur mesure.
+            </p>
+            <h2>Quels avantages pour vous ?</h2>
+            <p>
+                En vous inscrivant, vous bénéficierez de nombreux avantages :
+            </p>
+            <ul>
+                <li>Recevez des informations prioritaires sur les événements, les cours, et les conférences.</li>
+                <li>Accédez à des ressources éducatives et spirituelles adaptées à vos besoins.</li>
+                <li>Rejoignez un réseau de solidarité et d'entraide entre étudiants musulmans.</li>
+                <li>Participez activement aux initiatives de notre communauté et apportez votre contribution unique.</li>
+            </ul>
+            <p>
+                <strong>Alors, n'attendez plus !</strong> Cliquez sur le lien ci-dessous pour vous inscrire dès maintenant.
+                Ensemble, faisons de notre communauté un espace où la foi et la science s'épanouissent.
+            </p>
+            <p style="text-align: center;">
+                <a href="{% url 'formulaire' %}">S'inscrire ici</a>
+            </p>
+            <p>
+                Qu'Allah nous guide tous sur le droit chemin et qu'Il fasse de nous des musulmans pieux et sincère. Nous comptons sur votre
+                participation pour bâtir une communauté plus unie et plus forte.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+
+    <style>
+        
+
+        .announcement-container {
+            background-color: #ffffff;
+            padding-top: 10px;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .announcement-container h1 {
+            color: #007bff;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .announcement-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .announcement-container .date {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .announcement-container .cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .announcement-container .cta:hover {
+            background-color: #218838;
+        }
+    </style>
+
+<section class="container p-3 ">
+
+    <div class="announcement-container py-10 px-20">
+        <h1>Nettoyage de la Mosquée</h1>
+        <p>
+            Salam alaykum chers frères et sœurs,<br><br>
+            Nous vous informons qu'un grand nettoyage de notre mosquée aura lieu très prochainement. C'est une occasion pour nous tous de contribuer à maintenir la maison d'Allah propre et accueillante pour tous les fidèles.
+        </p>
+        <p>
+            La date exacte sera communiquée très bientôt, alors restez à l'écoute et préparez-vous à participer à cette noble action.
+        </p>
+        <p class="date">
+            Date à venir...
+        </p>
+        <a href="#" class="cta">Je m'engage à participer</a>
+    </div>
+
+</section>
+
+
+
+{% endblock%}
