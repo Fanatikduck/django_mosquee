@@ -20,6 +20,17 @@
             margin: 0;
             font-size: 80px;
         }
+        a{
+        color: black;
+        text-decoration: none;
+    }
+    a:active{
+        color: darkblue;
+    }
+    a:hover{
+        color: rgb(39, 178, 191);
+    }
+  
 </style>
 
 
@@ -41,6 +52,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Présentation de la Communauté Musulmane du Lycée Scientifique de Yamoussoukro</h5>
                   <p class="card-text"> Bienvenue sur le site officiel de la Communauté Musulmane du Lycée Scientifique de Yamoussoukro. Notre communauté est dédiée à la promotion et à la diffusion de la science religieuse et académique parmi les élèves et le personnel de notre lycée. Nous croyons que la connaissance est une lumière qui guide les esprits et les cœurs, et nous nous engageons à cultiver cette lumière dans notre environnement éducatif.
+                    <button type="button" class="btn btn-success link-success prince"> <a href="https://drive.google.com/drive/folders/1BN51LUO_NhneffH1X7tCr_0NVEdVQ4RY">Intégrez le goupe whatsapp de la communauté</a></button>
                 </div>
               </div>
             </div>
@@ -110,6 +122,9 @@
                           </a>
                           
                         </p>
+                        <h5>Cliquez pour accéder aux cours et documents</h5>
+                        <button type="button" class="btn btn-warning" > <a href="{% url 'cours'%}"> Cliquez ici</a></button>
+
                         <div class="collapse" id="collapseExample">
                           <div class="card card-body">
 
